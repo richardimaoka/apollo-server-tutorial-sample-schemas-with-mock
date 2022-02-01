@@ -1,6 +1,50 @@
 import { ApolloServer, gql } from "apollo-server";
 
+// query ($term: String!) {
+//   me {
+//     id
+//     username
+//     email
+//     role
+//   }
+//   user(id: "a") {
+//     id
+//     username
+//     email
+//     role
+//   }
+//   allUsers {
+//     id
+//     username
+//   }
+//   search(term: "abc") {
+//     ... on User {
+//       id
+//       username
+//       email
+//     }
+//     ... on Chat {
+//       id
+//       messages {
+//         id
+//         user {
+//           id
+//           username
+//         }
+//       }
+//     }
+//     ... on ChatMessage {
+//       content
+//       id
+//       user {
+//         id
+//         username
+//       }
+//     }
+//   }
+// }
 const typeDefs = gql`
+  # https://www.graphql-code-generator.com/
   scalar Date
 
   schema {
